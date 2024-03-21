@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #s1 {
+      background: white;
+    }
+
+    #s2 {
+      background: red;
+    }
+
+    #s3 {
+      background: yellow;
+    }
+
+    #s4 {
+      background: blue;
+    }
+
+    nav {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      background: gray;
+      padding: .5rem;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+    <section id="s1" name="page1">
+
+    </section>
+    <section id="s2" name="page2">
+
+    </section>
+    <section id="s3">
+
+    </section>
+    <section id="s4" name="page4">
+
+    </section>
+  
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.prototype.findIndex,Array.prototype.includes,Array.prototype.forEach,CustomEvent"></script>
+  <script src="../one-page-scroll.min.js"></script>
+  <script>
+   window.addEventListener('load', function() {
+      var el = document.querySelectorAll('section');
+      var app = new onePageScroll({
+        el: el
+      });
+      Array.prototype.slice.call(el).forEach(function(el) {
+        ['inview','outview'].forEach(function(key) {
+          el.addEventListener(key, function() {
+            console.log((el.getAttribute('name') || 'null') + ' is ' + key);
+          });
+        });
+      });
+
+      window.app = app;
+
+      document.addEventListener('submit', function(e) {
+        form = e.target;
+        app.time = form.time.value;
+        app.easing = form.easing.value;
+        app.loop = form.loop.value === 'true';
+        e.preventDefault();
+      })
+    });
+  </script>
+</body>
+
+</html>

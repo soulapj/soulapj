@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title> Portfolio de Soula Pierre-Jean </title>
+        <meta name="description" content="Portfolio en design">
+        <meta name="keywords" content="design, création, toulouse">
+        <meta charset="utf-8" />
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+     </head>
+
+     <body>
+
+       <section id="page_1" name="accueil">
+.
+         <div id="texte1">
+          <h1>SOULA
+            <br> Pierre-Jean </br></h1>
+          <h3>Etudiant Artiste Designer</h3>
+         </div>
+
+         <div id="objet1">
+           <img src="./images/scrolldown.gif"/>
+         </div>
+       </section>
+
+       <section id="page_2" name="illustration">
+         <div id="texte2">
+           <h2> Mes productions </h2>
+            <button>
+              <a href="./pages/design.html"> Vers les productions de design </a>
+            </button>
+
+            <button>
+              <a href="./pages/illustrations.html"> Vers les illustrations </a>
+            </button>
+         </div>
+       </section>
+
+       <section id="page_3" name="apropos">
+         <div id="texte3">
+           <h2>Contactez-moi !</h2>
+            <p>adresse mail : soulapj@gmail.com
+              <br>-</br>
+              <br>ou sur mes réseaux sociaux </br>
+            </p>
+         </div>
+
+         <div id="conteneur-objet1">
+           <div id="objet2">
+             <a href="https://www.facebook.com/?ref=logo"> <img src="./images/cadre_facebook.png" id="cadres"/> </a>
+           </div>
+
+           <div id="objet2">
+             <a href="https://twitter.com/home"> <img src="./images/cadre_twitter.png" id="cadres"/> </a>
+           </div>
+
+           <div id="objet2">
+             <a href="https://www.instagram.com/?hl=fr"> <img src="./images/cadre_instagram.png" id="cadres"/> </a>
+           </div>
+         </div>
+       </section>
+
+
+       <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Array.prototype.findIndex,Array.prototype.includes,Array.prototype.forEach,CustomEvent"></script>
+       <script src="./script/one-page-scroll.min.js"></script>
+       <script>
+        window.addEventListener('load', function() {
+           var el = document.querySelectorAll('section');
+           var app = new onePageScroll({
+             el: el
+           });
+           Array.prototype.slice.call(el).forEach(function(el) {
+             ['inview','outview'].forEach(function(key) {
+               el.addEventListener(key, function() {
+                 console.log((el.getAttribute('name') || 'null') + ' is ' + key);
+               });
+             });
+           });
+
+           window.app = app;
+
+           document.addEventListener('submit', function(e) {
+             form = e.target;
+             app.time = form.time.value;
+             app.easing = form.easing.value;
+             app.loop = form.loop.value === 'true';
+             e.preventDefault();
+           })
+         });
+
+       </script>
+
+       <script>
+       window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+</script>
+
+
+     </body>
+</html>
