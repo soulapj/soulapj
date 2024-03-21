@@ -1,0 +1,69 @@
+header,
+footer {
+  background-color: #f5ebeb;
+  padding: 20px 50px;
+
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  body {
+    background-image: linear-gradient(#faf5f5, #faf5f5, #faf5f5, #ebd6d6);
+  
+    height: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+  }
+
+  .boutons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px 200px;
+    gap: 20px;
+  }
+
+  .element1 {
+    background-image: radial-gradient(#99ccff, #91c4fa, #6b9ee0);
+    border-radius: 30% 70% 24% 76% / 72% 43% 57% 28%;
+    padding: 50px;
+    box-shadow: 6px 6px 25px rgb(0, 0, 0, 0.5);
+    grid-row: 2;
+    grid-column: 2;
+
+  }
+
+  .element2 {
+    background-image: radial-gradient(#fa9494, #f58f8f, #d67070);
+    border-radius: 22% 78% 63% 37% / 46% 65% 35% 54%;
+    padding: 50px;
+    box-shadow: 6px 6px 25px rgb(0, 0, 0, 0.5);
+    grid-row: 2;
+    grid-column: 3;
+
+  }
+
+  .element1:hover {
+    background-image: radial-gradient(#fa9494, #f58f8f, #d67070);
+    box-shadow: 10px 10px 125px rgb(255, 80, 80, 0.99);
+
+  }
+  
+  .element2:hover {
+    background-image: radial-gradient(#99ccff, #91c4fa, #6b9ee0);
+    box-shadow: 10px 10px 125px rgb(71, 117, 255, 0.99);
+
+  }
