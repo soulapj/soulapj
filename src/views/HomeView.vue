@@ -53,7 +53,7 @@
         </div>
         <div class="Texte">
           <p class="Textecoté">Intéressés par ce que vous avez-vu jusqu'à present? Contactez-moi!</p>
-          <a href="mailto:soulapj@gmail.com">mail: soulapj@gmail.com</a><br>
+          <a href="mailto:soulapj@gmail.com">mail: soulapj@gmail.com</a> <br>
           <a>téléphone: 06 28 90 53 48</a>
         </div>
 
