@@ -13,7 +13,6 @@
         <div class="bandeau2"></div>        
         <div class="contacts">
           <a href="mailto:soulapj@gmail.com">soulapj@gmail.com</a><br>
-          <a>0628905348</a>
         </div>
         <div class="grandProjetsOrg">
           <div v-for="(projet, index) in projets" :key="index">
@@ -54,7 +53,6 @@
         <div class="Texte">
           <p class="Textecoté">Intéressés par ce que vous avez-vu jusqu'à present? Contactez-moi!</p>
           <a href="mailto:soulapj@gmail.com">mail: soulapj@gmail.com</a> <br>
-          <a>téléphone: 06 28 90 53 48</a>
         </div>
 
         <div class="moyenProjetsOrg">
