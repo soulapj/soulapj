@@ -24,7 +24,7 @@ export default createStore({
         id: 3,
         name: "Webwares",
         image: require("@/assets/previews/ecf3.avif"),
-        description: "Crée dans le cadre d'un ECF, front et back du site de vente de meuble pour professionnels. Compte Admin SIRET: 75008 mdp: motdepasseB ",
+        description: "Crée dans le cadre d'un ECF, front et back du site de vente de meuble pour professionnels. Compte Admin SIRET: 56789012345678 mdp: motdepasseB ",
         visualCategory: 1,
         techCategory: "VueJS",
         lien: "https://webwares.netlify.app/",
